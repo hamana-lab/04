@@ -3,21 +3,17 @@
 
 int main(int argc, char *argv[])
 {
-    unsigned int x;
-    int b;
-    
-    printf("input a number : ");
-    scanf("%ui", &x);
-    
-    for (b=0; x != 0; x >>=1)
-    {
-        if (x & 1) //x의 2진수 끝자리가 1인가? 
-        {
-              b++;
-        }
-    }
-    
-    printf("The result is :%i\n", b);
+    int time, hour, min, sec;
+    printf("input the second :");
+    scanf("%i", &time);
+  	 
+    hour = time/3600;
+   	min = (time%3600)/60;
+   	sec = (time%3600)%60;
+   	
+   	printf("the time is %i : %i : %i\n", hour, min, sec);
+   	
+   	
     system("PAUSE");	
  
 
